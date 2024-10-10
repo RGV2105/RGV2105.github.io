@@ -11,18 +11,21 @@ body {
 
 /* Estilo para el header */
 .header-container {
+  position: relative;
+  z-index: 1000;
+  /* Asegura que el header esté encima de otros elementos */
   display: flex;
   flex-direction: column;
-  /* Alinea los elementos verticalmente para pantallas pequeñas */
   align-items: center;
-  /* Centra el contenido en el contenedor */
+  /* Alinea los elementos verticalmente en el centro */
   justify-content: center;
-  padding: 30px;
-  /* Mayor espacio para un diseño más aireado */
+  /* Centra el contenido horizontalmente */
+  padding: 100px;
+  /* Espacio para un diseño más aireado */
   background-color: #ffffff;
   /* Fondo limpio */
-  border-bottom: 2px solid #e0e0e0;
-  /* Línea inferior para separar el header del contenido */
+  border-bottom: 5px solid #e0e0e0;
+  /* Línea inferior para separar el header */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   /* Sombra sutil para profundidad */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -31,7 +34,7 @@ body {
 
 .header-container:hover {
   background-color: #f9f9f9;
-  /* Efecto sutil al hacer hover sobre el header */
+  /* Efecto sutil al hacer hover */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   /* Sombra más pronunciada al hacer hover */
 }
@@ -45,8 +48,10 @@ body {
   /* Centra todos los elementos */
   width: 100%;
   /* Asegúrate de que el header ocupe todo el ancho */
-  margin-bottom: 20px;
-  /* Espacio entre el header y el contenido siguiente */
+  max-width: 1200px;
+  /* Limita el ancho máximo para evitar que el contenido se expanda demasiado */
+  margin: 0 auto 20px;
+  /* Centra el header en la página y deja espacio abajo */
 }
 
 .header-text {
@@ -108,7 +113,7 @@ body {
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
   /* Aumenta ligeramente el tamaño al hacer hover */
   opacity: 0.9;
   /* Reduce un poco la opacidad al hacer hover */
@@ -134,6 +139,14 @@ nav {
 nav:hover {
   background-color: #0056b3;
   /* Color más oscuro al hacer hover sobre el nav */
+}
+
+.nav-menu-container {
+  position: relative;
+  z-index: 1000;
+  /* Asegura que el menú esté por encima de otros elementos */
+  margin-bottom: 20px;
+  /* Espacio debajo del menú para evitar solapamientos */
 }
 
 .nav-menu {
@@ -355,7 +368,6 @@ h2:hover::after {
   /* Aumenta el tamaño de la imagen al hacer hover */
 }
 
-
 .product-details {
   flex: 1;
   margin-left: 20px;
@@ -395,6 +407,7 @@ h2:hover::after {
   margin-top: auto;
   /* Mantiene el precio en la parte inferior */
 }
+
 .buy-button {
   background-color: #3498db;
   color: #fff;
@@ -429,7 +442,7 @@ h2:hover::after {
 .add-to-cart:hover {
   background-color: #0056b3;
   /* Color más oscuro al pasar el cursor */
-  transform: scale(1.05);
+  transform: scale(1.1);
   /* Efecto de agrandamiento al hacer hover */
 }
 
