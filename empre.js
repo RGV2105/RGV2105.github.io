@@ -74,3 +74,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+document.addEventListener('DOMContentLoaded', function () {
+    const buyButtons = document.querySelectorAll('.buy-button');
+
+    buyButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Obtener el nombre del producto y el precio desde el HTML
+            const product = this.closest('.product');
+            const productName = product.querySelector('h3').textContent;
+            const productPrice = product.querySelector('.product-price').textContent;
+
+            // Codificar el mensaje para WhatsApp
+            const whatsappMessage = `Hola, estoy interesado/a en el producto ${productName} con un precio de ${productPrice}. ¿Podrías darme más información?`;
+            const whatsappURL = `https://wa.me/593939520330?text=${encodeURIComponent(whatsappMessage)}`;
+
+            // Redirigir a la URL de WhatsApp
+            window.open(whatsappURL, '_blank');
+        });
+    });
+});
+

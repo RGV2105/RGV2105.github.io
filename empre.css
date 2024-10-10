@@ -340,7 +340,9 @@ h2:hover::after {
 }
 
 .product img {
-  max-width: 180px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
   border-radius: 8px;
   transition: transform 0.3s ease;
   /* Transición suave para la imagen */
@@ -352,6 +354,7 @@ h2:hover::after {
   transform: scale(1.1);
   /* Aumenta el tamaño de la imagen al hacer hover */
 }
+
 
 .product-details {
   flex: 1;
@@ -391,6 +394,19 @@ h2:hover::after {
   /* Color llamativo para el precio */
   margin-top: auto;
   /* Mantiene el precio en la parte inferior */
+}
+.buy-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #2980b9;
 }
 
 /* Estilo para el botón de añadir al carrito */
