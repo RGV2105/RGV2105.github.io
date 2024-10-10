@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const productPrice = product.querySelector('.product-price').textContent;
 
             // Codificar el mensaje para WhatsApp
-            const whatsappMessage = `Hola, estoy interesado en el producto ${productName} con un precio de ${productPrice}. ¿Podrías darme más información?`;
+            const whatsappMessage = `Hola, estoy interesad@ en el producto ${productName} con un precio de ${productPrice}. ¿Podrías darme más información?`;
             const whatsappURL = `https://wa.me/593939520330?text=${encodeURIComponent(whatsappMessage)}`;
 
             // Redirigir a la URL de WhatsApp
