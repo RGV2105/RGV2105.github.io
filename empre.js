@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function setupResponsiveNav() {
         const navMenu = document.querySelector('.nav-menu');
         const toggleButton = document.createElement('button');
-        toggleButton.innerText = 'Menú';
+        toggleButton.addEventListener("click",)
         toggleButton.classList.add('nav-toggle');
 
         toggleButton.addEventListener('click', function () {
